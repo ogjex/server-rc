@@ -25,6 +25,9 @@ alias mv='mv -vi'
 # set grep to have nice colors
 alias grep='grep --color=auto'
 
+# color user and hostname yellow
+PS1='\e[33;1m\u@\h: \e[31m\W\e[0m\$ '
+
 # set vi mode in bash
 set -o vi
 
