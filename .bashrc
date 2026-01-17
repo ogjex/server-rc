@@ -26,10 +26,17 @@ alias mv='mv -vi'
 alias grep='grep --color=auto'
 
 # color user and hostname yellow
-PS1='\e[33;1m\u@\h: \e[31m\W\e[0m\$ '
+BOLD='\[\e[1m\]'
+YELLOW='\[\e[0;33m\]'
+YELLOW_BOLD='\[\e[1;33m\]'
+RED='\[\e[31m\]'
+RESET='\[\e[0m\]'
+PS1="${BOLD}${YELLOW}\u@${YELLOW_BOLD}\h: ${RED}\W${RESET}\$ "
+
+#PS1='\e[33;1m\u@\h: \e[31m\W\e[0m\$ '
 
 # set vi mode in bash
-set -o vi
+#set -o vi
 
 # SHOPTS AUTOSTARTS
 shopt -s cdspell
